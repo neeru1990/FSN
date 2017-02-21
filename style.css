@@ -1,0 +1,110 @@
+/*
+Theme Name: Free Social Network
+Theme URI: http://example.org/themes/dusk/
+Description: Free BuddyPress SN for Everyone.
+Version: 1.0
+Author: Neeraj
+Author URI: http://webdoodle.tk/
+Template: bp-default
+Tags: buddypress, two-column, grey, dark
+*/
+
+/*
+@import url( ../../plugins/buddypress/bp-themes/bp-default/_inc/css/default.css );
+@import url( ../../plugins/buddypress/bp-themes/bp-default/_inc/css/responsive.css );
+
+/* Inherit the default theme adminbar styles 
+@import url( ../../plugins/buddypress/bp-themes/bp-default/_inc/css/adminbar.css );
+*/ 
+
+#container {
+	padding: 1% 0;
+}
+
+#whats-new-content {
+
+}
+
+#whats-new-avatar {
+    display: inline-block;
+}
+
+.float_lists_left {
+    float: left;
+}
+
+.activity-avatar, .activity-header, .ac-reply-avatar,.ac-textarea {
+    display: inline-block;
+}
+
+.activity-content {
+    min-height: 60%;
+}
+
+.activity-content div {
+    padding: 5px 1%;
+}
+
+.activity-inner-text {
+    
+}
+
+.activity-inner-text a{
+    
+}
+
+.ac-reply-avatar img {
+    vertical-align: initial;
+    width: 
+}
+
+.ac-reply-content div div:first-child {
+    padding: 1.1% 1% 0 0;
+}
+
+.ac-reply-content div div:last-child {
+    padding: 1% 0;
+}
+
+/* over-riding bootstrap css classes */
+.list-group-item {
+    margin-bottom: 10px;
+}
+/* increasing the navbar collapse break-point */
+@media (max-width: 972px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+    /* since 3.1.0 */
+    .navbar-collapse.collapse.in { 
+        display: block!important;
+    }
+    .collapsing {
+        overflow: hidden!important;
+    }
+}
