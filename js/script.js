@@ -30,7 +30,7 @@ FSNapp.config(function($stateProvider, $urlRouterProvider){
 				 'friendList': {
 				templateUrl: function($stateParams){
 					if(!$stateParams.uname)
-						return './wp-content/themes/Free-Social-Network/members/members-loop.php';
+						return './wp-content/themes/Free-Social-Network/members/friends-loop.php';
 					else
 						return './wp-content/themes/Free-Social-Network/members/:uname/single/friends.php'
 				},
@@ -42,6 +42,28 @@ FSNapp.config(function($stateProvider, $urlRouterProvider){
 		url: '/profile',
 		templateUrl: './wp-content/themes/Free-Social-Network/Activity/activity.php',
 		controller: 'profileController'
+	})
+	.state('members',{
+		url: '/members/:uname/',
+		views: {
+			'timelineProfileEdit': {
+				templateUrl: './wp-content/themes/Free-Social-Network/Activity/test.php',
+				controller: 'mainController'
+				},
+						   '': {
+				templateUrl: './wp-content/themes/Free-Social-Network/members/single/activity.php',
+				controller: 'profileController'
+				},
+				 'friendList': {
+				templateUrl: function($stateParams){
+					if(!$stateParams.uname)
+						return './wp-content/themes/Free-Social-Network/members/friends-loop.php';
+					else
+						return './wp-content/themes/Free-Social-Network/members/friends-loop.php'
+				},
+				controller: 'friendsController'
+				}
+			}
 	});
 
 });
@@ -67,7 +89,7 @@ FSNapp.controller('messagesController',function($scope){
 });
 
 FSNapp.controller('friendsController',function($scope, $routeParams){
-	$routeParams.uname = 'admin';
+	console.log($routeParams.uname);
 });
 
 FSNapp.controller('commentsController',function($scope){
