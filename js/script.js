@@ -38,6 +38,28 @@ FSNapp.config(function($stateProvider, $urlRouterProvider){
 				}
 			}
 		})
+	.state('messages',{
+		url: '/messages',
+		views: {
+			'timelineProfileEdit': {
+				templateUrl: './wp-content/themes/Free-Social-Network/Activity/test.php',
+				controller: 'mainController'
+				},
+						   '': {
+				templateUrl: './wp-content/themes/Free-Social-Network/members/single/messages.php',
+				controller: 'profileController'
+				},
+				 'friendList': {
+				templateUrl: function($stateParams){
+					if(!$stateParams.uname)
+						return './wp-content/themes/Free-Social-Network/members/friends-loop.php';
+					else
+						return './wp-content/themes/Free-Social-Network/members/friends-loop.php'
+				},
+				controller: 'friendsController'
+				}
+		}
+	})
 	.state('profile',{
 		url: '/profile',
 		templateUrl: './wp-content/themes/Free-Social-Network/Activity/activity.php',

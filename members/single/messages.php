@@ -6,7 +6,7 @@
  * @package BuddyPress
  * @subpackage bp-default
  */
-
+require_once( $_SERVER['DOCUMENT_ROOT'].'/wordpress/wp-load.php' );
 ?>
 
 <div class="item-list-tabs no-ajax" id="subnav" role="navigation">

@@ -67,7 +67,7 @@
 	      					</form>
 	      					<ul class="list-inline navbar-right nav navbar-nav">
 								<li><a ui-sref="home"><i class="material-icons">home</i></a></li>
-								<li><a ui-sref="message"><i class="material-icons">message</i></a></li>
+								<li><a ui-sref="messages"><i class="material-icons">message</i></a></li>
 								<li><a ui-sref="notification"><i class="material-icons">notifications</i></a></li>
 								<li><a ui-sref="profile"><i class="material-icons">account_circle</i></a></li>
 
